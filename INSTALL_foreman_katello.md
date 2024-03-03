@@ -11,6 +11,13 @@
   - [ ] Ansible integration
 
 #### enable cockpit on different port (9099)
+ ##### via Ansible (rhel-system-roles)
+ - enable role 'rhel-system-roles.cockpit'
+ - add both variables :
+   - cockpit_manage_selinux	= true
+   - cockpit_port = '9099'
+ - apply role & enjoy !
+ ##### Manually
  - systemctl edit cockpit.socket
    ```ini
    # https://cockpit-project.org/guide/latest/listen.html
