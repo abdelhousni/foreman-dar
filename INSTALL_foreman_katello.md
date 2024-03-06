@@ -82,7 +82,7 @@ Procedure
     
 5.  Ensure that you synchronize the source that you add.
 
-> :warning: add `validate_certs: False` to inventory source for self-signed cert
+> :warning: add `validate_certs: False` to inventory source for self-signed cert (via : https://github.com/ansible/awx/issues/12345#issuecomment-1416706935)
 
 ### 4.2. Configuring Provisioning Callback for a Host
 
