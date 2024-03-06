@@ -61,49 +61,9 @@ Procedure
     Table 1. Foreman Credentials
     | **Credential Type**: | **Foreman** |
     | --- | --- |
-    | **Foreman URL**: | 
-    
-    https://*foreman.example.com*
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Username**:
-    
-    
-    
-    
-    
-     | 
-    
-    The username of the Foreman user with the integration role.
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Password**:
-    
-    
-    
-    
-    
-     | 
-    
-    The password of the Foreman user.
-    
-    
-    
-    
-    
-     |
+    | **Foreman URL**: | https://*foreman.example.com*|
+    | **Username**:| The username of the Foreman user with the integration role.|
+    | **Password**:| The password of the Foreman user.|
     
 2.  Add an AWX user to the new credential. For more information about adding a user to a credential, see [Getting Started with Credentials](http://docs.ansible.com/ansible-tower/latest/html/userguide/credentials.html#getting-started-with-credentials) in the *AWX User Guide*.
     
@@ -114,90 +74,11 @@ Procedure
     Table 2. Inventory Source Options
     | **Source** | **Foreman** |
     | --- | --- |
-    | 
-    **Credential**
-    
-    
-    
-    
-    
-     | 
-    
-    The credential you create for Foreman server.
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Overwrite**
-    
-    
-    
-    
-    
-     | 
-    
-    Select
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Overwrite Variables**
-    
-    
-    
-    
-    
-     | 
-    
-    Select
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Update on Launch**
-    
-    
-    
-    
-    
-     | 
-    
-    Select
-    
-    
-    
-    
-    
-     |
-    | 
-    
-    **Cache Timeout**
-    
-    
-    
-    
-    
-     | 
-    
-    *90*
-    
-    
-    
-    
-    
-     |
+    | **Credential** | The credential you create for Foreman server.|
+    | **Overwrite**  | Select |
+    | **Overwrite Variables** | Select|
+    | **Update on Launch**| Select|
+    | **Cache Timeout**| *90*|
     
 5.  Ensure that you synchronize the source that you add.
     
@@ -263,11 +144,11 @@ Procedure
     
 9.  On the new host, enter the following command to start the `ansible-callback` service:
     
-    \# systemctl start ansible-callback
+    `# systemctl start ansible-callback`
     
 10.  On the new host, enter the following command to output the status of the `ansible-callback` service:
     
-    \# systemctl status ansible-callback
+    `# systemctl status ansible-callback`
     
     Provisioning callback is configured correctly if the command returns the following output:
     
@@ -278,14 +159,16 @@ Manual Provisioning Callback
 
 You can use the provisioning callback URL and the host configuration key from a host to call AWX. For example:
 
-\# curl -k -s --data curl --insecure --data host\_config\_key=*my\_config\_key* \\
+```bash
+# curl -k -s --data curl --insecure --data host\_config\_key=*my\_config\_key* \\
  https://*tower.example.com*/api/v2/job\_templates/*8*/callback/
+```
 
 Ensure that you use `https` when you enter the provisioning callback URL.
 
 This triggers the playbook run specified in the template against the host.
 
-https://docs.theforeman.org/2.5/Configuring_Ansible/index-foreman-el.html#integrating-ansible-tower_ansible
+ref : https://docs.theforeman.org/2.5/Configuring_Ansible/index-foreman-el.html#integrating-ansible-tower_ansible
 
 ### References
 * <a id="1">[1]</a>: https://docs.theforeman.org/nightly/Installing_Server/index-foreman-el.html#system-requirements_foreman
