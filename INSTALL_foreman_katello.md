@@ -81,7 +81,8 @@ Procedure
     | **Cache Timeout**| *90*|
     
 5.  Ensure that you synchronize the source that you add.
-    
+
+> :warning:  ⚠ Remark  : add `validate_certs: False` to inventory source
 
 ### 4.2. Configuring Provisioning Callback for a Host
 
