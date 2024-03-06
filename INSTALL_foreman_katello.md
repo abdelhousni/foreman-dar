@@ -82,7 +82,7 @@ Procedure
     
 5.  Ensure that you synchronize the source that you add.
 
-> :warning:  ⚠ Remark  : add `validate_certs: False` to inventory source
+> :warning: add `validate_certs: False` to inventory source for self-signed cert
 
 ### 4.2. Configuring Provisioning Callback for a Host
 
