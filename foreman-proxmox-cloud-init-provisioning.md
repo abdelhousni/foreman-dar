@@ -60,3 +60,23 @@ Here, we need repository IDs 9,6,5 and 2. Your ID list may be different.
 
 We publish the repositories to the library.
 `hammer content-view publish --name "cv-rhel8-prem-server" --organization "dar" --async`
+
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/34164d3a-a65b-4dbc-94b3-86024c2359a8)
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/bff5fc7d-0719-4545-87f1-ff70abad12f0)
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/7696e8f7-c247-4903-82eb-e68b5bd2a91a)
+
+List content-view version to get the ID
+```sh
+hammer content-view version list --content-view "cv-rhel8-prem-server" --organization "dar"
+---|--------------------------|---------|-------------|----------------------------------
+ID | NAME                     | VERSION | DESCRIPTION | LIFECYCLE ENVIRONMENTS
+---|--------------------------|---------|-------------|----------------------------------
+41 | cv-rhel8-prem-server 2.0 | 2.0     |             | Library, le-ops-rhel8-prem-server
+40 | cv-rhel8-prem-server 1.0 | 1.0     |             |
+---|--------------------------|---------|-------------|----------------------------------```
+
+Promote the content view from the 'Library' to the 'le-ops-rhel8-prem-server' lifecycle environment
+```sh
+hammer content-view version promote --content-view "cv-rhel8-prem-server" \
+--to-lifecycle-environment "le-ops-rhel8-prem-server" \
+--organization "dar" --async --id 41`
