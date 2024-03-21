@@ -55,3 +55,8 @@ ID  | NAME
 7   | Red Hat Satellite Client 6 for RHEL 9 x86_64 RPMs
 ----|---------------------------------------------------------------`
 
+Here, we need repository IDs 9,6,5 and 2. Your ID list may be different.
+`hammer content-view update --repository-ids 9,6,5,2 --name "cv-rhel8-prem-server" --organization "dar"`
+
+We publish the repositories to the library.
+`hammer content-view publish --name "cv-rhel8-prem-server" --organization "dar" --async`
