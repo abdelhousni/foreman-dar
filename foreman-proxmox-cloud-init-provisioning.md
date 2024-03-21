@@ -80,3 +80,5 @@ Promote the content view from the 'Library' to the 'le-ops-rhel8-prem-server' li
 hammer content-view version promote --content-view "cv-rhel8-prem-server" \
 --to-lifecycle-environment "le-ops-rhel8-prem-server" \
 --organization "dar" --async --id 41`
+
+
