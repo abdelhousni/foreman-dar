@@ -79,15 +79,18 @@ Promote the content view from the 'Library' to the 'le-ops-rhel8-prem-server' li
 ```sh
 hammer content-view version promote --content-view "cv-rhel8-prem-server" \
 --to-lifecycle-environment "le-ops-rhel8-prem-server" \
---organization "dar" --async --id 41`
+--organization "dar" --async --id 41
+```
 
 Create an activation key for registering our RHEL instances with Satellite and ultimately RHSM.
-`hammer activation-key create \
+```sh
+hammer activation-key create \
   --content-view "cv-rhel8-prem-server" \
   --lifecycle-environment "le-ops-rhel8-prem-server" \
   --name "ak-ops-rhel8-prem-server" \
   --organization "dar"
-`
+```
+
 ![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/c72c7690-01e2-489b-abf6-7ca246f0bb30)
 
 ![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/a760a749-317b-41f2-838a-f190ca972d5a)
