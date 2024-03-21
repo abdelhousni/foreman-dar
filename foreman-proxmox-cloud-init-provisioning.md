@@ -88,6 +88,9 @@ Create an activation key for registering our RHEL instances with Satellite and u
   --name "ak-ops-rhel8-prem-server" \
   --organization "dar"
 `
-![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/de793dc5-daf2-4283-aec6-36adf2aa2f7c)
-![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/456a689b-d7df-4f94-8858-8c16e92816b2)
-![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/c8efdd55-0776-4069-9682-604c0be5087e)
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/c72c7690-01e2-489b-abf6-7ca246f0bb30)
+
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/a760a749-317b-41f2-838a-f190ca972d5a)
+
+![image](https://github.com/abdelhousni/foreman-dar/assets/23284113/ed52ec0a-61aa-4992-a46a-234c646e4464)
+
